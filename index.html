@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/eed339ecf4.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,9 @@
 <body>
     <div class="nav-bar">
         <div class="logo">Snapshot</div>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-hamburger"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -103,5 +107,19 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+
+    <script >
+        const hamburger = document.querySelector('div.hamburger');
+const ulNavLinks = document.querySelector('ul.nav-link');
+function toggleNav() {
+    hamburger.classList.toggle('fa-bars');
+    hamburger.classList.toggle('fa-times');
+    ulNavLinks.classList.toggle('nav-active');
+
+hamburger.addEventListener('click', () => {
+    ulNavLinks.classList.toggleNav('show');
+});
+}
+    </script>
 </body>
 </html>
